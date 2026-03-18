@@ -13,9 +13,10 @@ nodes = [
 
 c = 0
 for i in nodes:
-    a = i.split(";")[3].lower()
-    if a == "up":
-        print(a)
+    b = i.split(";")[0]
+    a = i.split(";")[3].upper()
+    if a == "UP":
+        print(b,a)
         c +=1
     
 print(c)
