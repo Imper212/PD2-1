@@ -11,11 +11,9 @@ nodes = [
 "Srv-Log;10.0.0.15;105;UP"
 ]
 
-c = 0
+
 for i in nodes:
-    a = i.split(";")[3].lower()
-    if a == "up":
-        print(a)
-        c +=1
-    
-print(c)
+    b = i.split(";")[0]
+    a = i.split(";")[2]
+    if int(a) > 100:
+        print(f"BRĪDINĀJUMS: {b}  ir lēns! {a}")
